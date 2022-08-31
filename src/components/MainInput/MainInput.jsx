@@ -19,7 +19,7 @@ const MainInput = ({ setMovieId }) => {
     setInputValue(e.target.value);
     console.log(e.target.value);
   };
-
+ 
   return (
     <form className="MainInput" onSubmit={onHandleSubmit}>
       <input

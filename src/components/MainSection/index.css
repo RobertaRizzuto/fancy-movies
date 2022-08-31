@@ -1,0 +1,19 @@
+.mainSection {
+  padding: 100px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgb(0, 0, 0);
+
+  height: 100vh;
+  color: white;
+}
+.mainSectionTop {
+  display: flex;
+  gap: 20px;
+  width: calc(100% - 80px)
+}
+
+.mainSectionSide {
+  width: calc(100vw - 515px);
+}

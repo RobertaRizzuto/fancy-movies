@@ -1,0 +1,59 @@
+.upcomingListSection h2 {
+  width: calc(100vw - 100px);
+  margin: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.upcomingList {
+  display: flex;
+  justify-content: flex-start;
+  overflow:scroll;
+  overflow-y: hidden; 
+  gap: 20px;
+  width: 100%;
+  height: 160px;
+}
+
+.upcomingListCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: white;
+  width: 200px;
+  background-color: black;
+}
+
+.upcomingListCard--img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.upcomingListCard__text {
+  padding: 0 30px;
+}
+
+.upcomingListCard__text h3 {
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.upcomingListCard__text p {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.upcomingListCard__text p::before {
+  content: "Average: ";
+  opacity: 0.7;
+}
