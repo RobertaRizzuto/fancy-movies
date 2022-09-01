@@ -14,7 +14,7 @@ const Navbar = ({children}) => {
       <section className="dropdown">
         <ul>
         <li><a href="#">HOME</a></li> 
-        <li><a href="#">HOME</a></li> 
+        <li><a href="#">ABOUT</a></li> 
         <li>{children}</li> 
          
         </ul>
