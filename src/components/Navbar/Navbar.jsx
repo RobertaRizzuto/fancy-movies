@@ -13,8 +13,8 @@ const Navbar = ({children}) => {
       </section>
       <section className="dropdown">
         <ul>
-        <li><a href="7">HOME</a></li> 
-        <li><a href="7">HOME</a></li> 
+        <li><a href="#">HOME</a></li> 
+        <li><a href="#">HOME</a></li> 
         <li>{children}</li> 
          
         </ul>
