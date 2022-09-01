@@ -1,6 +1,7 @@
 .MovieEntity {
   display: flex;
-  background-color: rgb(26, 0, 45);;
+  background: rgb(107,31,119);
+background: linear-gradient(180deg, rgba(119,20,95,1) 0%, rgba(65,11,52,1) 61%, rgba(8,8,8,1) 100%);
   color: white;
   text-transform: uppercase;
 }

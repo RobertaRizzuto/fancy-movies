@@ -1,9 +1,9 @@
-.popularListSection h2 {
+.topRatedFilteredListSection h2 {
   margin: 20px 0 0;
   font-size: 20px;
   text-transform: uppercase;
 }
-.popularList {
+.topRatedFilteredList {
   display: flex;
   justify-content: flex-start;
   overflow: scroll;
@@ -13,7 +13,7 @@
   height: 160px;
 }
 
-.popularListCard {
+.topRatedFilteredListCard {
   display: flex;
   flex: 0 0 auto;
   width: 200px;
@@ -24,7 +24,7 @@
   background-color: black;
 }
 
-.popularListCard--img {
+.topRatedFilteredListCard--img {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,25 +35,25 @@
   opacity: 0.7;
 }
 
-.popularListCard__text {
+.topRatedFilteredListCard__text {
   padding: 0 30px;
 }
 
-.popularListCard__text h3 {
+.topRatedFilteredListCard__text h3 {
   margin: 0;
   position: relative;
   text-transform: uppercase;
   z-index: 1;
 }
 
-.popularListCard__text p {
+.topRatedFilteredListCard__text p {
   position: relative;
   font-size: 0.9rem;
   font-weight: bold;
   z-index: 1;
 }
 
-.popularListCard__text p::before {
+.topRatedFilteredListCard__text p::before {
   content: "Average: ";
   opacity: 0.7;
 }

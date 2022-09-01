@@ -1,13 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import MainCard from "../MainCard";
 import TopRatedList from "../TopRatedList";
+import TopRatedFilteredList from "../TopRatedFilteredList";
 import PopularList from "../PopularList";
 import UpcomingList from "../UpcomingList";
+import Counter from "../Counter";
 import { GET } from "../../utils/api";
 import "./index.css";
 
 const MainSection = () => {
   const [movieLists, setMovieLists] = useState({});
+  const [filteredList, setFilteredList] = useState([]);
+  const [value, setValue] = useState(8.5);
 
   useEffect(() => {
     GET("movie", "popular", "&language=en-US&page=1").then((data) =>
@@ -22,7 +26,16 @@ const MainSection = () => {
       setMovieLists((prev) => ({ ...prev, upcoming: data.results }))
     );
   }, []);
-  console.log(movieLists);
+
+  useEffect(
+    () =>
+      movieLists.topRated &&
+      setFilteredList(
+        movieLists.topRated.filter((el) => el.vote_average >= value)
+      ),
+    [movieLists, value]
+  );
+ 
   return (
     <div className="mainSection">
       <div className="mainSectionTop">
@@ -36,6 +49,15 @@ const MainSection = () => {
       </div>
 
       {movieLists.upcoming && <UpcomingList cardData={movieLists.upcoming} />}
+      {movieLists.topRated && (
+        <TopRatedFilteredList cardData={filteredList}>
+          <Counter
+            increase={() => setValue((prev) => prev + 0.1)}
+            decrease={() => setValue((prev) => prev - 0.1)}
+            value={value}
+          />
+        </TopRatedFilteredList>
+      )}
     </div>
   );
 };

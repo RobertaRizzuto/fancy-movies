@@ -2,6 +2,7 @@ import './index.css';
 
 const Card = ({ cardData, cardClass=""}) => {
   const { title, vote_average, poster_path } = cardData;
+  
 
   return (
     <div className={cardClass + "Card"}>

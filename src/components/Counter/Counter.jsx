@@ -1,28 +1,18 @@
-import { useState, useEffect, useRef } from 'react';
+import "./index.css";
 
-const Counter = () => {
-  const valueRef = useRef(0);
-  // const [value, setValue] = useState(0);
-
-  // useEffect(() => {
-  //   console.log(value);
-  // }, [value])
-
-  const onHandleClick = () => {
-    // setValue(prev => prev + 1);
-    valueRef.current++;
-
-    const timer = setInterval(() => {
-      console.log(valueRef.current);
-    }, 500);
-  };
-
+const Counter = ({ increase, decrease, value }) => {
   return (
-    <div>
-      <h1>{ valueRef.current }</h1>
-      <button onClick={onHandleClick}>Incrementa</button>
+    <div className="counter">
+      {" "}
+      <button className="decrease-btn" onClick={decrease}>
+      -
+      </button>
+      <p>{value.toFixed(1)}</p>
+      <button className="increase-btn" onClick={increase}>
+      +
+      </button>
     </div>
-  )
-}
+  );
+};
 
 export default Counter;

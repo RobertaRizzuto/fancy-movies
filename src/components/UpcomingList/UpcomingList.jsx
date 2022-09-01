@@ -7,7 +7,6 @@ const UpcomingList = ({ cardData }) => {
     <div className="upcomingListSection">
       <h2>Upcoming</h2>
     <div className="upcomingList">
-      <Card cardData={cardData} cardClass="upcomingList" />
       {
         cardData.map((el, i) => el && <Card cardData={el} cardClass="upcomingList"  key={i}/>)
       }

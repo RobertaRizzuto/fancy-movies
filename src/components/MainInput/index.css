@@ -1,12 +1,12 @@
 .MainInput {
   height: 40px;
   display: flex;
-  gap:8px;
+  gap: 8px;
   position: absolute;
-  top: 40px;
-  left: calc(50% - 170px);
+  top: 20px;
+  right: 40px;
   border-radius: 8px;
-  transition: all .35s;
+  transition: all 0.35s;
 }
 
 .MainInput .active {
@@ -16,22 +16,18 @@
   outline: none;
   font-weight: bold;
   border-radius: 8px;
-  
 }
 
 .MainInput .inactive {
   opacity: 0;
- 
-
 }
 .MainInput button {
   width: 100px;
   border: 0;
   font-weight: bold;
   background-color: white;
-  border-left: 1px solid lightgrey;
+
   cursor: pointer;
 
   border-radius: 8px;
-  
 }

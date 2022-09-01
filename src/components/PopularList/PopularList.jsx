@@ -7,9 +7,8 @@ const PopularList = ({ cardData }) => {
     <div className="popularListSection">
       <h2>Popular</h2>
     <div className="popularList">
-      <Card cardData={cardData} cardClass="popularList" />
       {
-        cardData.map((el, i) => el && <Card cardData={el} cardClass="popularList"  key={i}/>)
+        cardData.map((el, i) => <Card cardData={el} cardClass="popularList"  key={i}/>)
       }
     </div></div>
   );
