@@ -3,34 +3,44 @@ import "./index.css";
 
 const MainInput = ({ setMovieId }) => {
   const inputRef = useRef(null);
-  const [inputValue, setInputValue] = useState('');
-  const [inputClass, setInputClass] = useState("inactive");
+  const [inputValue, setInputValue] = useState("");
+  const [isInputVisibile, setInputVisibility] = useState(false);
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  useEffect(() => {}, []);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
     inputValue && setMovieId(inputValue);
+    window.scroll({
+      top: 2500,
+      left: 0,
+      behavior: "smooth",
+    });
+    setInputVisibility(false);
   };
 
   const onHandleInput = (e) => {
     setInputValue(e.target.value);
     console.log(e.target.value);
   };
- 
+
   return (
-    <form className="MainInput" onSubmit={onHandleSubmit}>
-      <input
-        ref={inputRef}
-        value={inputValue}
-        onChange={onHandleInput}
-        type="text" 
-        className={inputClass}
-      />
-      <button type="submit" onClick={() => setInputClass("active")}>Search</button>
-    </form>
+    <>
+      {!isInputVisibile && (
+        <li> <a href="#"onClick={() => setInputVisibility(!isInputVisibile)}>SEARCH</a> </li>
+      )}
+      {isInputVisibile && (
+        <form className="MainInput" onSubmit={onHandleSubmit}>
+          <input
+            ref={inputRef}
+            value={inputValue}
+            onChange={onHandleInput}
+            type="text"
+          />
+          <button type="submit">Search</button>
+        </form>
+      )}
+    </>
   );
 };
 

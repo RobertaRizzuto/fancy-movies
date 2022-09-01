@@ -2,7 +2,7 @@
   padding: 80px 40px ;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 80px;
   background: rgb(107,31,119);
 background: linear-gradient(0deg,rgba(119,20,95,1) 0%, rgba(65,11,52,1) 61%, rgba(8,8,8,1) 100%);
 
