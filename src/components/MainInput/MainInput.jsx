@@ -21,13 +21,13 @@ const MainInput = ({ setMovieId }) => {
 
   const onHandleInput = (e) => {
     setInputValue(e.target.value);
-    console.log(e.target.value);
+  
   };
 
   return (
     <>
       {!isInputVisibile && (
-        <li> <a href="#"onClick={() => setInputVisibility(!isInputVisibile)}>SEARCH</a> </li>
+        <a href="#"onClick={() => setInputVisibility(!isInputVisibile)}>SEARCH</a>
       )}
       {isInputVisibile && (
         <form className="MainInput" onSubmit={onHandleSubmit}>
