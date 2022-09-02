@@ -1,5 +1,6 @@
 import Card from "../Card";
 import "./index.css";
+import { memo } from "react";
 
 
 const PopularList = ({ cardData, setModalVisibility, isModalVisibile,setModalData }) => {
@@ -14,4 +15,4 @@ const PopularList = ({ cardData, setModalVisibility, isModalVisibile,setModalDat
   );
 };
 
-export default PopularList;
+export default memo(PopularList);

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import "./index.css";
 
 const MainInput = ({ setMovieId }) => {
@@ -6,7 +6,7 @@ const MainInput = ({ setMovieId }) => {
   const [inputValue, setInputValue] = useState("");
   const [isInputVisibile, setInputVisibility] = useState(false);
 
-  useEffect(() => {}, []);
+
 
   const onHandleSubmit = (e) => {
     e.preventDefault();

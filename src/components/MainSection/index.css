@@ -16,5 +16,8 @@ background: linear-gradient(0deg,rgba(119,20,95,1) 0%, rgba(65,11,52,1) 61%, rgb
 }
 
 .mainSectionSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
   width: calc(100vw - 510px);
 }

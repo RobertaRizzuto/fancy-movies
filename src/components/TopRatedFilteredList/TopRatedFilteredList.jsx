@@ -1,5 +1,6 @@
 import Card from "../Card";
 import "./index.css";
+import { memo } from "react";
 
 const TopRatedFilteredList = ({ cardData, children, setModalVisibility, isModalVisibile,setModalData}) => {
   return (
@@ -15,4 +16,4 @@ const TopRatedFilteredList = ({ cardData, children, setModalVisibility, isModalV
   );
 };
 
-export default TopRatedFilteredList;
+export default memo(TopRatedFilteredList) ;

@@ -1,5 +1,6 @@
 import Card from "../Card";
 import "./index.css";
+import { memo } from "react";
 
 
 const UpcomingList = ({ cardData, setModalVisibility, isModalVisibile,setModalData}) => {
@@ -14,4 +15,4 @@ const UpcomingList = ({ cardData, setModalVisibility, isModalVisibile,setModalDa
   );
 };
 
-export default UpcomingList;
+export default memo(UpcomingList);

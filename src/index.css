@@ -8,17 +8,19 @@
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
     width: 10px;
-    height: 10px;
+    height: 10px;  
   }
 
   *::-webkit-scrollbar-track {
-    background: #7a7a7a36;
+  
+    background: #25011c50;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #616161;
+    width: 40%;
+    background-color: #160012;
     border-radius: 8px;
-    border: 3px none #ffffff;
+    border: 2px solid #ffffff00;
   }
 body {
   margin: 0;
