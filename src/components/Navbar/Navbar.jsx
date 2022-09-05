@@ -1,11 +1,7 @@
-
-import "./index.css";
+import "./index.scss";
 import logo from "./logo.svg";
 
-
-const Navbar = ({children}) => {
-  
- 
+const Navbar = ({ children }) => {
   return (
     <nav className="main-navbar">
       <section className="logotype">
@@ -13,10 +9,13 @@ const Navbar = ({children}) => {
       </section>
       <section className="dropdown">
         <ul>
-        <li><a href="#">HOME</a></li> 
-        <li><a href="#">ABOUT</a></li> 
-        <li>{children}</li> 
-         
+          <li>
+            <a href="#">HOME</a>
+          </li>
+          <li>
+            <a href="#">ABOUT</a>
+          </li>
+          <li>{children}</li>
         </ul>
       </section>
     </nav>

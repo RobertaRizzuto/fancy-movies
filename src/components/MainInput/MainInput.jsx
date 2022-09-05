@@ -1,12 +1,10 @@
 import { useRef, useState } from "react";
-import "./index.css";
+import "./index.scss";
 
 const MainInput = ({ setMovieId }) => {
   const inputRef = useRef(null);
   const [inputValue, setInputValue] = useState("");
   const [isInputVisibile, setInputVisibility] = useState(false);
-
-
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
@@ -21,13 +19,14 @@ const MainInput = ({ setMovieId }) => {
 
   const onHandleInput = (e) => {
     setInputValue(e.target.value);
-  
   };
 
   return (
     <>
       {!isInputVisibile && (
-        <a href="#"onClick={() => setInputVisibility(!isInputVisibile)}>SEARCH</a>
+        <a href="#" onClick={() => setInputVisibility(!isInputVisibile)}>
+          SEARCH
+        </a>
       )}
       {isInputVisibile && (
         <form className="MainInput" onSubmit={onHandleSubmit}>

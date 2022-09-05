@@ -1,0 +1,26 @@
+.mainSection {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: rgb(107, 31, 119);
+  background: linear-gradient(
+    0deg,
+    rgba(119, 20, 95, 1) 0%,
+    rgba(65, 11, 52, 1) 61%,
+    rgba(8, 8, 8, 1) 100%
+  );
+
+  color: white;
+  &Top {
+    display: flex;
+    gap: 20px;
+    width: calc(100% - 80px);
+  }
+  &Side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100vw - 510px);
+  }
+}
