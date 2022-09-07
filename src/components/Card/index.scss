@@ -1,15 +1,14 @@
 @import "../../styles/_variables";
 @import "../../styles/_mixins";
-.Card:hover {
-  @include generic-hover();
-}
+
 
 .Card {
+ 
   @include flex-element(column, center, stretch, wrap, 0);
   @include border(0, 12px);
+  // transition: all (0.35s);
   position: relative;
   background-color: $third-color;
-  margin-bottom: 4px;
 
   img {
     @include element-position(absolute, 0, auto, auto, 0, 0);
@@ -17,18 +16,21 @@
     @include border(0, 12px);
     object-fit: cover;
   }
+
   h3 {
-    @include text-element(0, uppercase,auto, auto, text);
-    
+    @include text-element(0, uppercase, auto, auto);
   }
-  p { 
-    position: relative;
-    font-size: 0.9rem;
-    font-weight: bold;
-    z-index: 1;
+  p {
+    @include text-element(8px 0, none, 0.9rem);
   }
   p::before {
     content: "Average: ";
     opacity: 0.7;
   }
+}
+.Card:hover {
+  @include generic-hover();
+}
+.Card:hover > img {
+  opacity: 0.3;
 }

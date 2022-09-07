@@ -70,7 +70,7 @@ const MainSection = () => {
           )}
         </div>
       </div>
-
+      <div className="mainSectionBottom">
       {movieLists.upcoming && (
         <UpcomingList
           cardData={movieLists.upcoming}
@@ -93,6 +93,8 @@ const MainSection = () => {
           />
         </TopRatedFilteredList>
       )}
+        </div>
+      
       {isModalVisibile && (
         <Modal
           data={modalData}

@@ -5,7 +5,9 @@
   $justify: flex-start,
   $align: stretch,
   $wrap: nowrap,
-  $gap: 0px
+  $gap: 0px,
+  $width: auto,
+  $height: auto
 ) {
   display: flex;
   flex-direction: $direction;
@@ -14,6 +16,10 @@
   flex-wrap: $wrap;
   gap: $gap;
   flex: 0 0 auto;
+  width: $width;
+  height: $height;
+  box-sizing: border-box;
+  transition: all ( 0.35s);
 }
 @mixin generic-appereance(
   $width: auto,
@@ -31,10 +37,11 @@
 
 @mixin element-position(
   $position: static,
-  $top: auto,
   $right: auto,
-  $bottom: auto,
+  $top: auto,
   $left: auto,
+  $bottom: auto,
+
   $z-index: 1
 ) {
   position: $position;
@@ -78,13 +85,13 @@
 }
 
 @mixin text-element(
-  $margin:auto,
+  $margin: 0 0 0 0,
   $text-transform: uppercase,
   $font-size: auto,
   $font-weight: bold,
   $color: $text-color
 ) {
-  margin: 0;
+  margin: $margin;
   position: relative;
   text-transform: $text-transform;
   font-size: $font-size;

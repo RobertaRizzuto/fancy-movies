@@ -1,24 +1,20 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+
 .upcomingList {
-  display: flex;
-  justify-content: flex-start;
+  @include flex-element(row, flex-start, stretch, nowrap, 20px, 100%, 250px);
   overflow: scroll;
   overflow-y: hidden;
-  gap: 20px;
-  width: 100%;
-  height: 250px;
-  &Section {
-    h2 {
-      width: calc(100vw - 100px);
-      margin: 0;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-  }
+
   &Card {
-    width: 150px;
-    &__text {
-      padding: 0 30px;
-      
+    @include generic-appereance(180px, auto, 1, 0 0 4px, 0 30px);
+  }
+
+  &Section {
+    @include flex-element(column, flex-start, stretch, nowrap, 5px, 100%);
+
+    h2 {
+      @include text-element(20px 0 0, uppercase, 20px, auto);
     }
   }
 }

@@ -1,26 +1,47 @@
+@import "../../styles/_variables";
+@import "../../styles/_mixins";
+
 .mainSection {
+  @include flex-element(column, center, stretch, wrap, 40px,);
   padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background: rgb(107, 31, 119);
+
   background: linear-gradient(
     0deg,
-    rgba(119, 20, 95, 1) 0%,
-    rgba(65, 11, 52, 1) 61%,
-    rgba(8, 8, 8, 1) 100%
+    $first-color 0%,
+    $second-color 61%,
+    $third-color 100%
   );
 
-  color: white;
   &Top {
-    display: flex;
-    gap: 20px;
-    width: calc(100% - 80px);
+    @include flex-element(
+      row,
+      space-between,
+      stretch,
+      nowrap,
+      20px,100%
+      
+    );
   }
   &Side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: calc(100vw - 510px);
+    @include flex-element(
+      column,
+      space-between,
+      stretch,
+      nowrap,
+      0px,
+      calc(100% - 420px)
+    );
+   
+  }
+  &Bottom{
+    @include flex-element(
+      column,
+      space-between,
+      stretch,
+      nowrap,
+      0px,
+      100%
+    );
+   
   }
 }
